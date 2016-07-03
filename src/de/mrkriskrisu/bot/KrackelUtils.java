@@ -43,7 +43,10 @@ public class KrackelUtils {
 		}
 
 		public static void error(Exception e) {
-			e.printStackTrace();
+			handle(LogType.ERROR, e.getLocalizedMessage());
+			for(StackTraceElement el: e.getStackTrace()) {
+				handle(LogType.ERROR, el.toString());
+			}
 		}
 
 		private static String getCurrentTime() {
