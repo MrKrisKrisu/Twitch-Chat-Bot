@@ -152,7 +152,7 @@ public class SocketManager {
 		OutputThread.sendRawLine(bwriter, line);
 	}
 
-	public static void onDisconnect() {
+	public void onDisconnect() {
 		Logger.log("Connection to chat disethablished. Bot will exit...");
 		System.exit(1);
 	}

@@ -70,6 +70,7 @@ public class InputThread extends Thread {
 
 		if (!_disposed) {
 			Logger.log("*** Disconnected.");
+			bot.getSocketManager().onDisconnect();
 			System.exit(1);
 			return;
 		}
