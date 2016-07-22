@@ -25,7 +25,7 @@ public class Bot {
 		Logger.log("**********************");
 		Logger.log("");
 		Logger.log("SimpleChatBot made by MrKrisKrisu");
-		Logger.log("Source and current Version at https://github.com/mrkriskrisu");
+		Logger.log("Source and current Version at https://github.com/MrKrisKrisu/Twitch-Chat-Bot");
 		Logger.log("");
 		Logger.log("**********************");
 		Logger.log("");
