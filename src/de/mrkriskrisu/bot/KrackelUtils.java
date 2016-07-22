@@ -10,7 +10,7 @@ public class KrackelUtils {
 
 	public static class Logger {
 
-		private static boolean debug = true;
+		private static boolean debug = false;
 		private static PrintWriter out;
 
 		private static void checkLogger() {
@@ -52,6 +52,11 @@ public class KrackelUtils {
 		private static String getCurrentTime() {
 			DateFormat hour = new SimpleDateFormat("HH:mm:ss");
 			return hour.format(new Date(System.currentTimeMillis()));
+		}
+		
+		public static void setDebuggingMode(boolean mode) {
+			Logger.debug = mode;
+			Logger.log("Debug mode " + (mode ? "activated" : "deactivated"));
 		}
 
 	}
