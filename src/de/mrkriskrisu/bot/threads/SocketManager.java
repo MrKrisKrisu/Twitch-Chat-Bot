@@ -90,8 +90,9 @@ public class SocketManager {
 	}
 
 	public void handleLine(String line) {
+		Logger.debug(">>> " + line);
 		if (line.startsWith("PING ")) {
-			Logger.log(line.substring(5));
+			sendRawLine("PONG :tmi.twitch.tv");
 			return;
 		}
 
@@ -149,6 +150,7 @@ public class SocketManager {
 	}
 
 	public static void sendRawLine(String line) {
+		Logger.debug("<<< " + line);
 		OutputThread.sendRawLine(bwriter, line);
 	}
 
