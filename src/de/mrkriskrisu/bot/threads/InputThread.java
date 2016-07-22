@@ -21,6 +21,7 @@ public class InputThread extends Thread {
 	private boolean _disposed = false;
 
 	public InputThread(Bot bot, Socket socket, BufferedReader breader, BufferedWriter bwriter) {
+		this.bot = bot;
 		_socket = socket;
 		_breader = breader;
 		_bwriter = bwriter;
